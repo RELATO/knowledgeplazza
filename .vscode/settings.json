@@ -1,0 +1,17 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    // Some fun settings to get started
+    "files.autoSave": "onFocusChange",
+
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true
+    },
+
+    "typescript.check.workspaceVersion": false,
+
+    "tslint.autoFixOnSave": true
+}

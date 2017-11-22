@@ -1,0 +1,12 @@
+.answers {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer {
+  display: inline-flex;
+
+  .letter {
+    margin-right: 5px;
+  }
+}

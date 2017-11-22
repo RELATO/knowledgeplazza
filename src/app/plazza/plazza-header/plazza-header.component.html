@@ -1,0 +1,14 @@
+<div class="plazza-header">
+  <app-greeting></app-greeting>
+
+  <!-- menu opens when trigger button is clicked -->
+  <button md-icon-button [md-menu-trigger-for]="menu">
+    <md-icon>more_vert</md-icon>
+  </button>
+
+  <md-menu #menu="mdMenu" x-position="before">
+      <button md-menu-item disabled> Settings </button>
+      <button md-menu-item disabled> Help </button>
+      <button md-menu-item (click)="logout()"> Sign Out </button>
+  </md-menu>
+</div>

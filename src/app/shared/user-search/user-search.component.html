@@ -1,0 +1,6 @@
+ <md-input [formControl]="userQuery" placeholder="Search for a Friend" dividerColor="primary">
+    </md-input>
+
+<md-nav-list>
+    <md-list-item *ngFor="let result of results | async" (click)="userClick(result)">{{result.username}}</md-list-item>
+</md-nav-list>

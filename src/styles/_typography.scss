@@ -1,0 +1,109 @@
+// Default typography
+$fontStack: Roboto, 'Helvetica Neue', sans-serif; // Google's material design fonts
+
+.text {
+    font-family: $fontStack;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+
+    // Default font opacity for Material, maintains contrast with different backgrounds
+    opacity: 87;
+}
+
+.light-text {
+    @extend .text;
+
+    opacity: 54;
+}
+
+.display-4 {
+    font-size: 112px;
+    font-weight: 300;
+    line-height: 128px;
+    letter-spacing: -5px;
+
+    @extend .light-text;
+}
+
+.display-3 {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+
+    @extend .light-text;
+}
+
+.display-2 {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 64px;
+
+    @extend .light-text;
+}
+
+.display-1 {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 52px;
+
+    @extend .light-text;
+}
+
+.headline {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 44px;
+
+    @extend .text;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 44px;
+
+    @extend .text;
+}
+
+.subhead {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+
+    @extend .text;
+}
+
+.body {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+
+    @extend .text;
+}
+
+.caption {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 32px;
+    //TODO: all caps?
+
+    @extend .light-text;
+}
+
+.menu {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 32px;
+
+    @extend .text;
+}
+
+.button {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 32px;
+
+    @extend .text;
+}

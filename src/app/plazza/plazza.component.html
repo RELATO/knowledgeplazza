@@ -1,0 +1,12 @@
+<app-plazza-header></app-plazza-header>
+
+<nav md-tab-nav-bar aria-label="Plazza Navigation Links">
+   <a md-tab-link fxFlex
+      *ngFor="let tabLink of tabLinks; let i = index"
+      [routerLink]="tabLink.link"
+      [active]="activeLinkIndex === i"
+      (click)="activeLinkIndex = i">
+     {{tabLink.label}}
+   </a>
+ </nav>
+ <router-outlet></router-outlet>

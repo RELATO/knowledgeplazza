@@ -1,0 +1,9 @@
+.plazza-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+app-greeting {
+    flex-grow: 1;
+}

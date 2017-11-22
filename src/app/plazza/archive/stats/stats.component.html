@@ -1,0 +1,18 @@
+<div fxLayout="column" fxLayoutAlign="start stretch">
+<div fxLayout="row" fxLayoutAlign="center center">
+  <app-percent class="display-1" [stat]="this.userStats"></app-percent>
+  <div class="body"> Correct </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div class="display-1">{{userStats?.correct}}</div>
+<div class="body"> Questions correct,
+  <span class="display-1">{{userStats?.countdown}}</span> more for next archive item</div>
+</div>
+
+<div class="body" *ngFor="let category of categories" fxLayout="row" fxLayoutAlign="space-around center">
+  <div class="title">{{ category }}</div>
+
+  <app-stat [stat]="categoryStat(category)"></app-stat>
+
+</div>
+</div>

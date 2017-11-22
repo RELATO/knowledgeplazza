@@ -1,0 +1,27 @@
+<div fxLayout="column">
+  <md-input [(ngModel)]="questionData.category" placeholder="Category" dividerColor="primary">
+  </md-input>
+
+  <md-textarea [(ngModel)]="questionData.questionText" placeholder="Question" dividerColor="primary">
+  </md-textarea>
+
+  <md-input [(ngModel)]="questionData.answers[0]" placeholder="Answer 0" dividerColor="primary">
+  </md-input>
+
+  <md-input [(ngModel)]="questionData.answers[1]" placeholder="Answer 1" dividerColor="primary">
+  </md-input>
+
+  <md-input [(ngModel)]="questionData.answers[2]" placeholder="Answer 2" dividerColor="primary">
+  </md-input>
+
+  <md-input [(ngModel)]="questionData.answers[3]" placeholder="Answer 3" dividerColor="primary">
+  </md-input>
+
+  <md-input [(ngModel)]="questionData.answers[4]" placeholder="Answer 4" dividerColor="primary">
+  </md-input>
+
+  <md-input [(ngModel)]="questionData.correctAnswer" placeholder="correct answer" dividerColor="primary">
+  </md-input>
+
+  <button md-raised-button (click)="submitQuestion()">Submit</button>
+</div>

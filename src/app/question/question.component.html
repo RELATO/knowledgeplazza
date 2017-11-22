@@ -1,0 +1,9 @@
+<!--<h1>APUSH</h1>
+<h4> Time remaining: </h4>-->
+<h2 class="subhead"> {{ question.questionText }} </h2>
+<div class="answers">
+  <span class="answer button" *ngFor="let answer of question.answers; let i = index">
+    <div class="letter">{{ letter(i) }}</div>
+    <button md-button [disabled]="correctAnswer != undefined && correctAnswer != i" color="primary" (click)="submit(i)"> {{answer}} </button>
+  </span>
+</div>

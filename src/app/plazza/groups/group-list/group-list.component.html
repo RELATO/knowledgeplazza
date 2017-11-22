@@ -1,0 +1,33 @@
+<app-user-search (userChosen)="addGroup($event)"></app-user-search>
+
+<md-nav-list>
+    <md-list-item *ngFor="let group of groups | appAsync; let i = index">
+        <img md-list-avatar [appAsset]="'/archive/washington.jpg'" alt="">
+            <a md-line (click)="openGroup(group._id)">{{group.name}}</a>
+        <!-- menu opens when trigger button is clicked -->
+        <button md-icon-button [md-menu-trigger-for]="menu">
+            <md-icon>more_vert</md-icon>
+        </button>
+
+        <md-menu #menu="mdMenu" x-position="before">
+            <button md-menu-item color="warn" (click)="groupsService.remove(group._id)"> Delete </button>
+        </md-menu>
+
+    </md-list-item>
+
+    <!--<md-divider></md-divider>-->
+    <!--<h3 md-subheader>Recent Battles</h3>
+
+    <button md-raised-button (click)="battle()">Battle Now</button>
+
+    <md-list-item (click)="openRecentBattle(recentBattle)" *ngFor="let recentBattle of battlesService.items | async; let i = index">
+        <a md-line>{{recentBattle.name}}</a>
+    </md-list-item>-->
+
+</md-nav-list>
+
+<div class="add-button">
+    <button md-mini-fab (click)="addGroup()">
+        <md-icon>add</md-icon>
+    </button>
+</div>

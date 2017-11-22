@@ -1,0 +1,3 @@
+<div *ngIf="question">
+  <app-question (answerChosen)="answerChosen($event)" [question]="question" [correctAnswer]="correctAnswer"></app-question>
+</div>

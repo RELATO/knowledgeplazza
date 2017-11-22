@@ -1,0 +1,10 @@
+{
+  "nedb": "../data/",
+  "auth": {
+    "token": {
+    },
+    "local": {
+      "usernameField": "username"
+    }
+  }
+}

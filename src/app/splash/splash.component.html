@@ -1,0 +1,23 @@
+<div fxLayout="row">
+  <div fxLayout="column" fxLayoutAlign="start center" fxFlex fxFlex.gt-xs="33%">
+    <div fxLayout="column" fxLayoutAlign="start center" style="margin: 20px">
+      <div fxLayout="row" fxLayoutAlign="space-around" fxLayoutGap="10px">
+        <button md-raised-button [routerLink]="['/login']">Sign In</button>
+        <button md-raised-button [routerLink]="['/login/sign-up']">Sign Up</button>
+      </div>
+
+      <div class="title">Or</div>
+
+      <div class="body">Answer your first question to get started</div>
+
+      <app-question (answerChosen)="answerChosen()"></app-question>
+    </div>
+    <div *ngIf="monitor.isActive('xs')">
+      <app-about-us></app-about-us>
+    </div>
+  </div>
+
+  <div *ngIf="!monitor.isActive('xs')">
+    <app-about-us></app-about-us>
+  </div>
+</div>

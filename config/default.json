@@ -1,0 +1,11 @@
+{
+  "nedb": "../data/",
+  "auth": {
+    "token": {
+      "secret": "sn//BVRlOSQlCifbOevWwsPkoPmyESe7VAVWnOmboacOnix7N4k/gEp7PhK1ZNdnmvwqqGEsJ0TfWtJgTp9ABg=="
+    },
+    "local": {
+      "usernameField": "username"
+    }
+  }
+}

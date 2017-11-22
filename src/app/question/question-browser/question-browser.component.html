@@ -1,0 +1,8 @@
+<md-nav-list>
+    <md-list-item (click)="showQuestion(category)" *ngFor="let category of categories">
+        <h3>{{category.name}}</h3>
+        <div style="flex-grow: 1"></div>
+        <app-percent [stat]="stats?.categories[category.name]"></app-percent>
+        <app-stat [stat]="stats?.categories[category.name]"></app-stat>
+    </md-list-item>
+</md-nav-list>

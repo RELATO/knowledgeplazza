@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/all-theme';
+
+@import 'color'; // import color constants
+@import 'typography';
+
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include md-core();
+
+// Apply theme to all angular material components
+@include angular-material-theme($theme);

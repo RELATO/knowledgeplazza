@@ -1,0 +1,26 @@
+<div fxLayout="column" fxAlign="center">
+    <div *ngIf="error">
+        <div class="error-msg">Couldn't load archive items</div>
+    </div>
+    <div fxFlex="100%" fxShow="false" fxShow.xs>
+        <md-grid-list cols="2" fxFlex="100%">
+            <md-grid-tile class="archive-item" *ngFor="let item of archiveService.items | async" [ngStyle]="img(item)">
+                <md-grid-tile-footer class="item-name">{{item.name}}</md-grid-tile-footer>
+            </md-grid-tile>
+        </md-grid-list>
+    </div>
+    <div fxFlex="100%" fxShow="false" fxShow.sm>
+        <md-grid-list cols="3" fxFlex="100%">
+            <md-grid-tile class="archive-item" *ngFor="let item of archiveService.items | async" [ngStyle]="img(item)">
+                <md-grid-tile-footer class="item-name">{{item.name}}</md-grid-tile-footer>
+            </md-grid-tile>
+        </md-grid-list>
+    </div>
+    <div fxFlex="100%" fxShow="false" fxShow.gt-sm>
+        <md-grid-list cols="5" fxFlex="100%">
+            <md-grid-tile class="archive-item" *ngFor="let item of archiveService.items | async" [ngStyle]="img(item)">
+                <md-grid-tile-footer class="item-name">{{item.name}}</md-grid-tile-footer>
+            </md-grid-tile>
+        </md-grid-list>
+    </div>
+</div>

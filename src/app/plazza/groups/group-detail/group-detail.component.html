@@ -1,0 +1,8 @@
+<md-input [formControl]="groupName" placeholder="Group Name" dividerColor="primary" (blur)="setGroupName(groupName.value)">
+</md-input>
+
+<app-user-search (userChosen)="addPerson($event)"></app-user-search>
+
+<md-divider></md-divider>
+
+<app-leaderboard [group]="group" (removeAt)="removeAt($event)"></app-leaderboard>

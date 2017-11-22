@@ -1,0 +1,12 @@
+@import 'src/styles/color';
+
+* {
+    color: #43474f;
+}
+div.login{ 
+    display: flex; 
+    flex-direction: column;
+}
+.error {
+    color: $warn;
+}

@@ -1,0 +1,27 @@
+// @mixin archive-theme($theme) {
+//     $primary: map-get($theme, primary);
+
+//     .archive-item {
+//         background: $primary;
+//     }
+// }
+
+@import '~@angular/material/core/style/elevation';
+@import '../../../styles/typography';
+
+.archive-item {
+    background-color: lightblue; // Default value for items without an image
+
+    &:active {
+        @include md-elevation(8);
+    }
+
+    @include md-elevation-transition();
+    @extend .text;
+}
+
+.error-msg {
+    @extend .subhead;
+
+    margin-top: 16px;
+}
